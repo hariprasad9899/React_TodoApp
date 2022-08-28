@@ -1,22 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DynaPuff:wght@400;500;600&display=swap');
 *,*::before,*::after {
     box-sizing: border-box;
-    font-family: 'Bebas Neue', cursive;
-    /* font-family: 'DynaPuff', cursive; */
+    /* font-family: 'Bebas Neue', cursive; */
+    font-family: 'DynaPuff', cursive;
 }
 
 html,body {
     margin: 0;
     padding: 0;
     color: #05386B;
+}
+
+.wrapper {
+    height: 100vh;
     background-color: #5CDB95;
+    transition: 0.4s ease;
 }
 
 .themeSwitcher {
-    
+    width: 100%;
+    padding: 10px;
 }
 
 .themeButton {
     margin-left: auto;
-
+    width: 90px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 30px;
+    position: relative;
+    background-color: white;
 }
+
+.ball {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: -10px;
+    left: 5px;
+    background-color: #05386B;
+    transition: 0.4s ease;
+}
+
+.todoInput {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todoInput input[type="text"] {
+    width: 50%;
+    margin:auto;
+    padding: 20px;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+}
+
+.todoList {
+    margin: auto;
+    margin-top: 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* border: 1px solid black; */
+}
+
+.eachItem {
+    width: 100%;
+    padding: 5px;
+    color: black;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
