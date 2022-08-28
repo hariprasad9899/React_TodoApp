@@ -11,13 +11,14 @@ function TodoList(props) {
             userSelect: "none",
             width: "100%",
             textDecoration: (eachItem.done) ? "line-through": "none",
+            color: (eachItem.done) ? "red": (myTheme.dark) ? "#282828" : "white",
         }
 
         let listStyle = {
             backgroundColor: (myTheme.dark) ? "white" : "#05386B",
             color: (myTheme.dark) ? "#282828" : "white",
         }
-        
+
         return (
             <div className='eachItem' key = {eachItem.id} style = {listStyle}>
                 <p 

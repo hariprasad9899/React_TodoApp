@@ -22,12 +22,24 @@ export default function App() {
     // Handling Input values 
 
 
-    const  [inputval, setInputVal] = useState("Add and enter 🙂...")
+    const  [inputval, setInputVal] = useState("Add and enter 🙂!!!")
     function handlerInputChange(e) {
         setInputVal(prevVal => {
             return e.target.value   
         })
     }
+
+    
+    // creating array to store todo list items
+
+    const [todoItems, setTodoItems] = useState([
+        {
+            work: "Task 1",
+            done: false,
+            id: nanoid()
+        },
+    ])
+    
 
     // Adding items into list when user hits enter
     function addToList(e) {
@@ -45,22 +57,6 @@ export default function App() {
 
     // 
 
-
-    // creating array to store todo list items
-
-    const [todoItems, setTodoItems] = useState([
-        {
-            work: "Task 1",
-            done: false,
-            id: nanoid()
-        },
-        {
-            work: "Task 2",
-            done: false,
-            id: nanoid()
-        },
-    ])
-    
     function handleStrike(receivedId) {
 
         setTodoItems((prevTodoItems) => {

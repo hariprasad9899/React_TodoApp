@@ -6,7 +6,7 @@ export default function Theme(props) {
     const myTheme1 = React.useContext(ThemeContext);
     const ballMovement = {
         backgroundColor: (myTheme1.dark) ? "white": "#05386B",
-        left: (myTheme1.dark) ? "50px" : "5px"
+        left: (myTheme1.dark) ? "60%" : "5%"
     }
     const buttonBackground = {
         backgroundColor: (myTheme1.dark) ? "#3500D3": "white",
